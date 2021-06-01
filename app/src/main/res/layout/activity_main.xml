@@ -35,10 +35,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TanqueLitros">
+        app:layout_constraintTop_toBottomOf="@+id/distanciaPercorrida">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextText"
+            android:id="@+id/precoAlcool"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/PrecoAlcool">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/back"
+            android:id="@+id/precoGasolina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:width="350dp"
@@ -67,56 +67,61 @@
             android:textSize="15sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/btnCalculator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:width="200dp"
-        android:height="60dp"
-        android:onClick="calcular"
-        android:text="CALCULAR"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PrecoGasolina" />
-
-    <TextView
-        android:id="@+id/resultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:width="300dp"
-        android:height="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalculator" />
-
     <EditText
-        android:id="@+id/LitrosPKm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="44dp"
+        android:id="@+id/consumoGasolina"
+        android:layout_width="227dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
         android:width="150dp"
         android:ems="10"
-        android:hint="Litros por KM "
+        android:hint="Consumo Gasolina (L/Km)"
         android:inputType="numberDecimal"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/TanqueLitros"
+        android:id="@+id/consumoAlcool"
+        android:layout_width="225dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:width="150dp"
+        android:ems="10"
+        android:hint="Consumo Alcool (L/KM)"
+        android:inputType="numberDecimal"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consumoGasolina" />
+
+    <EditText
+        android:id="@+id/distanciaPercorrida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="25dp"
         android:width="300dp"
         android:ems="10"
-        android:hint="Maximo do tanque (Litros)"
+        android:hint="Distancia que será percorrida"
         android:inputType="numberDecimal"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LitrosPKm" />
+        app:layout_constraintTop_toBottomOf="@+id/consumoAlcool" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:width="200dp"
+        android:height="70dp"
+        android:background="#3949AB"
+        android:backgroundTint="@color/black"
+        android:onClick="btncalcular"
+        android:text="CALCULAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PrecoGasolina" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
