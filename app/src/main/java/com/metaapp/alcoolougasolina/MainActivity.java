@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog.Builder resultGasolina = new AlertDialog.Builder(this);
                 resultGasolina.setTitle("Realize o abastecimento com Gasolina");
                 resultGasolina.setMessage("Assim realizando este abastecimento você ira economizar: R$ "
-                        +  df.format(formulaGasolina));
+                        +  df.format(diferencaGasolina));
 
                 resultGasolina.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
